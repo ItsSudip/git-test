@@ -55,6 +55,15 @@
               e.page();
           })();
         </script>
+        <script>
+          function alertdata() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            console.log(name, email, phone);
+            alert(`${name}, ${email}, ${phone}`);
+          }
+        </script>
         <title>Document</title>
       </head>
       <body>
@@ -70,5 +79,20 @@
       DataplaneURL: https://rudderstacndaacoknlyyjqa.dataplane.rudderstack.com
     </h3>
     <h3>WriteKey: 258wZ0SgYSyK1s6YQ6KAVottPhG</h3>
+    <form action="alertdata()" method="post">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" value="Samson Dauda" /><br />
+      <label for="email">Email:</label><br />
+      <input
+        type="text"
+        id="email"
+        name="email"
+        value="samson@testmail.com"
+      /><br /><br />
+      <label for="phone">Phone:</label><br />
+      <input type="text" id="phone" name="phone" value="+9189988998" /><br />
+      <input type="reset" value="Reset" />
+    </form>
+    <button onclick="alertdata()">Test</button>
   </body>
 </html>
