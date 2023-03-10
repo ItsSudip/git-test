@@ -57,11 +57,20 @@
         </script>
         <script>
           function alertdata() {
-            const name = document.getElementById("name").value;
+            const fname = document.getElementById("fname").value;
+            const lname = document.getElementById("lname").value;
+            const streetAddress =
+              document.getElementById("streetAddress").value;
+            const city = document.getElementById("city").value;
+            const state = document.getElementById("state").value;
+            const country = document.getElementById("country").value;
+            const postalCode = document.getElementById("postalCode").value;
             const email = document.getElementById("email").value;
             const phone = document.getElementById("phone").value;
-            console.log(name, email, phone);
-            alert(`${name}, ${email}, ${phone}`);
+            console.log(fname, email, phone);
+            alert(
+              `${fname} ${lname}, ${streetAddress}, ${city}, ${state}, ${country}, ${postalCode}, ${email}, ${phone}`
+            );
           }
         </script>
         <title>Document</title>
@@ -80,8 +89,37 @@
     </h3>
     <h3>WriteKey: 258wZ0SgYSyK1s6YQ6KAVottPhG</h3>
     <form action="alertdata()" method="post">
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" value="Samson Dauda" /><br />
+      <label for="fname">First Name:</label><br />
+      <input type="text" id="fname" name="fname" value="Samson" /><br />
+
+      <label for="lname">Last Name:</label><br />
+      <input type="text" id="lname" name="lname" value="Dauda" /><br />
+
+      <label for="streetAddress">Street Address:</label><br />
+      <input
+        type="text"
+        id="streetAddress"
+        name="streetAddress"
+        value="87,B.K Road"
+      /><br />
+
+      <label for="city">City:</label><br />
+      <input type="text" id="city" name="city" value="Kolkata" /><br />
+
+      <label for="state">State</label><br />
+      <input type="text" id="state" name="state" value="West Bengal" /><br />
+
+      <label for="country">Country</label><br />
+      <input type="text" id="country" name="country" value="India" /><br />
+
+      <label for="postalCode">Postal Code</label><br />
+      <input
+        type="text"
+        id="postalCode"
+        name="postalCode"
+        value="700085"
+      /><br />
+
       <label for="email">Email:</label><br />
       <input
         type="text"
