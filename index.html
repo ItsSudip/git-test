@@ -1,12 +1,74 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="text/javascript">
+          !(function () {
+            var e = (window.rudderanalytics = window.rudderanalytics || []);
+            (e.methods = [
+              "load",
+              "page",
+              "track",
+              "identify",
+              "alias",
+              "group",
+              "ready",
+              "reset",
+              "getAnonymousId",
+              "setAnonymousId",
+              "getUserId",
+              "getUserTraits",
+              "getGroupId",
+              "getGroupTraits",
+              "startSession",
+              "endSession",
+            ]),
+              (e.factory = function (t) {
+                return function () {
+                  e.push([t].concat(Array.prototype.slice.call(arguments)));
+                };
+              });
+            for (var t = 0; t < e.methods.length; t++) {
+              var r = e.methods[t];
+              e[r] = e.factory(r);
+            }
+            (e.loadJS = function (e, t) {
+              var r = document.createElement("script");
+              (r.type = "text/javascript"),
+                (r.async = !0),
+                (r.src =
+                  "https://cdn.rudderlabs.com/v1.1/rudder-analytics.min.js");
+              var a = document.getElementsByTagName("script")[0];
+              a.parentNode.insertBefore(r, a);
+            }),
+              e.loadJS(),
+              e.load(
+                "258wZ0SgYSyK1s6YQ6KAVottPhG",
+                "https://rudderstacndaacoknlyyjqa.dataplane.rudderstack.com"
+              ),
+              e.page();
+          })();
+        </script>
+        <title>Document</title>
+      </head>
+      <body>
+        <h1>Hello World</h1>
+      </body>
+    </html>
+
     <title>Document</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus similique corrupti nostrum natus? Sapiente, enim, suscipit eaque adipisci eius neque nostrum maxime velit expedita nemo dolorem, animi tempora itaque provident!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aperiam et dicta at quo beatae quidem iusto id repellat consequuntur voluptate, nostrum sint hic explicabo voluptates vitae, velit doloremque. Ipsum.</p>
-</body>
+  </head>
+  <body>
+    <h1>Rudderstack Testing Website</h1>
+    <h3>
+      DataplaneURL: https://rudderstacndaacoknlyyjqa.dataplane.rudderstack.com
+    </h3>
+    <h3>WriteKey: 258wZ0SgYSyK1s6YQ6KAVottPhG</h3>
+  </body>
 </html>
