@@ -7,7 +7,7 @@ view: pages {
     type: string
     sql: ${TABLE}."ID" ;;
   }
-  dimension: anonymous_id {
+  dimension: rudder_anonymous_id {
     type: string
     sql: ${TABLE}."ANONYMOUS_ID" ;;
   }
@@ -528,19 +528,19 @@ view: pages {
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	id,
-	context_campaign_name,
-	context_os_name,
-	context_traits_company_name,
-	context_app_name,
-	context_library_name,
-	context_traits_first_name,
-	context_traits_last_name,
-	context_name,
-	name,
-	context_traits_name,
-	context_traits_timezone_name
-	]
+  id,
+  context_campaign_name,
+  context_os_name,
+  context_traits_company_name,
+  context_app_name,
+  context_library_name,
+  context_traits_first_name,
+  context_traits_last_name,
+  context_name,
+  name,
+  context_traits_name,
+  context_traits_timezone_name
+  ]
   }
 
 }
