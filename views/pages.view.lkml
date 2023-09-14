@@ -9,6 +9,7 @@ view: pages {
   }
   dimension: rudder_anonymous_id {
     type: string
+    tags: ["rudder_anonymous_id"]
     sql: ${TABLE}."ANONYMOUS_ID" ;;
   }
   dimension: category {
@@ -437,6 +438,7 @@ view: pages {
   }
   dimension: email {
     type: string
+    tags: ["email"]
     sql: ${TABLE}."EMAIL" ;;
   }
   dimension: initial_referrer {
@@ -509,6 +511,7 @@ view: pages {
   }
   dimension: user_id {
     type: string
+    tags: ["user_id"]
     sql: ${TABLE}."USER_ID" ;;
   }
   dimension_group: uuid_ts {
