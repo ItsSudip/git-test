@@ -19,4 +19,12 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 #   }
 # }
 
+
+datagroup: looker_upgrade_test_default_datagroup {
+  # sql_trigger: SELECT MAX(id) FROM etl_log;;
+  max_cache_age: "1 hours"
+}
+
+persist_with: looker_upgrade_test_default_datagroup
+
 explore: pages {}
