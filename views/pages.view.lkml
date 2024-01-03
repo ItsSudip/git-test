@@ -12,6 +12,11 @@ view: pages {
     tags: ["rudder_anonymous_id"]
     sql: ${TABLE}."ANONYMOUS_ID" ;;
   }
+  dimension: rudder_group_id {
+    type: string
+    tags: ["rudder_group_id"]
+    sql: ${TABLE}."ANONYMOUS_ID" ;;
+  }
   dimension: category {
     type: string
     sql: ${TABLE}."CATEGORY" ;;
