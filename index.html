@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="text/javascript">
+          !(function () {
+            var e = (window.rudderanalytics = window.rudderanalytics || []);
+            (e.methods = [
+              "load",
+              "page",
+              "track",
+              "identify",
+              "alias",
+              "group",
+              "ready",
+              "reset",
+              "getAnonymousId",
+              "setAnonymousId",
+              "getUserId",
+              "getUserTraits",
+              "getGroupId",
+              "getGroupTraits",
+              "startSession",
+              "endSession",
+            ]),
+              (e.factory = function (t) {
+                return function () {
+                  e.push([t].concat(Array.prototype.slice.call(arguments)));
+                };
+              });
+            for (var t = 0; t < e.methods.length; t++) {
+              var r = e.methods[t];
+              e[r] = e.factory(r);
+            }
+            (e.loadJS = function (e, t) {
+              var r = document.createElement("script");
+              (r.type = "text/javascript"),
+                (r.async = !0),
+                (r.src =
+                  "https://cdn.rudderlabs.com/v1.1/rudder-analytics.min.js");
+              var a = document.getElementsByTagName("script")[0];
+              a.parentNode.insertBefore(r, a);
+            }),
+              e.loadJS(),
+              e.load(
+                "258wZ0SgYSyK1s6YQ6KAVottPhG",
+                "https://rudderstacndaacoknlyyjqa.dataplane.rudderstack.com"
+              ),
+              e.page();
+          })();
+        </script>
+        <script>
+          function alertdata() {
+            const fname = document.getElementById("fname").value;
+            const lname = document.getElementById("lname").value;
+            const streetAddress =
+              document.getElementById("streetAddress").value;
+            const city = document.getElementById("city").value;
+            const state = document.getElementById("state").value;
+            const country = document.getElementById("country").value;
+            const postalCode = document.getElementById("postalCode").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            console.log(fname, email, phone);
+            alert(
+              `${fname} ${lname}, ${streetAddress}, ${city}, ${state}, ${country}, ${postalCode}, ${email}, ${phone}`
+            );
+          }
+        </script>
+        <title>Document</title>
+      </head>
+      <body>
+        <h1>Hello World</h1>
+      </body>
+    </html>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Rudderstack Testing Website</h1>
+    <h3>
+      DataplaneURL: https://rudderstacndaacoknlyyjqa.dataplane.rudderstack.com
+    </h3>
+    <h3>WriteKey: 258wZ0SgYSyK1s6YQ6KAVottPhG</h3>
+    <form action="alertdata()" method="post">
+      <label for="fname">First Name:</label><br />
+      <input type="text" id="fname" name="fname" value="Samson" /><br />
+
+      <label for="lname">Last Name:</label><br />
+      <input type="text" id="lname" name="lname" value="Dauda" /><br />
+
+      <label for="streetAddress">Street Address:</label><br />
+      <input
+        type="text"
+        id="streetAddress"
+        name="streetAddress"
+        value="87,B.K Road"
+      /><br />
+
+      <label for="city">City:</label><br />
+      <input type="text" id="city" name="city" value="Kolkata" /><br />
+
+      <label for="state">State</label><br />
+      <input type="text" id="state" name="state" value="West Bengal" /><br />
+
+      <label for="country">Country</label><br />
+      <input type="text" id="country" name="country" value="India" /><br />
+
+      <label for="postalCode">Postal Code</label><br />
+      <input
+        type="text"
+        id="postalCode"
+        name="postalCode"
+        value="700085"
+      /><br />
+
+      <label for="email">Email:</label><br />
+      <input
+        type="text"
+        id="email"
+        name="email"
+        value="samson@testmail.com"
+      /><br /><br />
+      <label for="phone">Phone:</label><br />
+      <input type="text" id="phone" name="phone" value="+9189988998" /><br />
+      <input type="reset" value="Reset" />
+    </form>
+    <button onclick="alertdata()">Test</button>
+  </body>
+</html>
